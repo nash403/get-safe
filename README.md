@@ -1,9 +1,7 @@
 # get-safe
 #### Safe access to nested properties in JS objects without getting a TypeError but undefined instead.
 ***
-You can even call a nested function in objects if the last nested key ends with `()`.
-
-**Note:** You can't pass arguments to the function (this is a *TODO* for a future version)
+You can even call a nested function in objects if the last nested key ends with `()`. You can pass arguments by adding them as last parameters of the get-safe function call.
 ***
 #### Install:
 `npm install get-safe --save`
