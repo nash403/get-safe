@@ -1,0 +1,17 @@
+{
+  "name": "get-safe",
+  "version": "1.0.1",
+  "description": "safe access to nested properties in JS objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "keywords": [
+    "safe",
+    "get",
+    "object",
+    "nested"
+  ],
+  "author": "Nash403",
+  "license": "MIT"
+}
