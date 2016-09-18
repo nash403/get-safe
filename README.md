@@ -1,5 +1,5 @@
 # get-safe
-#### Safe access to nested properties in JS objects without getting a TypeError but undefined instead.
+#### Safe access to deeply nested properties or functions in JS objects without getting a TypeError but undefined instead.
 ***
 You can even call a nested function in objects if the last nested key ends with `()`. You can pass arguments by adding them as last parameters of the get-safe function call.
 ***
@@ -10,7 +10,7 @@ You can even call a nested function in objects if the last nested key ends with 
  ```JavaScript
 
 const _ = require ('get-safe');
-const totoObj = {
+const myObj = {
   foo: {
     bar: {
       baz: ['winter','is','coming'],
@@ -23,7 +23,7 @@ const totoObj = {
 };
 
 // Tests
-console.log(_('foo.bar.baz.2',totoObj)); // logs 'coming'
-console.log(_('foo.bar.fifo()',totoObj,'arg1','arg2')); // calls the nested function 'fifo' and logs its result
-console.log(_('foo.inexistant.property.baz',totoObj)); // logs 'undefined'
+console.log(_('foo.bar.baz.2',myObj)); // logs 'coming'
+console.log(_('foo.bar.fifo()',myObj,'arg1','arg2')); // calls the nested function 'fifo' and logs its result
+console.log(_('foo.inexistant.property.baz',myObj)); // logs 'undefined'
 ```
