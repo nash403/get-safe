@@ -27,3 +27,4 @@ console.log(_('foo.bar.baz.2',myObj)); // logs 'coming'
 console.log(_('foo.bar.fifo()',myObj,'arg1','arg2')); // calls the nested function 'fifo' and logs its result
 console.log(_('foo.inexistant.property.baz',myObj)); // logs 'undefined'
 ```
+In browser you can call `getSafe` instead of `_`. **Note:** ES6 features are used so pay attention to the browser compatibility or use a transpiler like Babel or Traceur.

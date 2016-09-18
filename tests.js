@@ -1,4 +1,4 @@
-const _ = require ('./index');
+const _ = require ('./get-safe');
 const toto = {
   foo: {
     bar: {
