@@ -4,7 +4,8 @@
   "description": "safe access to deeply nested properties and functions in JS objects without getting a TypeError",
   "main": "index.js",
   "scripts": {
-    "test": "node tests.js"
+    "test": "node tests.js",
+    "build": "rimraf ./web/interpolate.js && webpack"
   },
   "keywords": [
     "safe",
@@ -31,5 +32,12 @@
     "url": "https://github.com/nash403/get-safe.git"
   },
   "author": "Nash403",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.2"
+  }
 }
