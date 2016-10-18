@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node tests.js",
-    "build": "rimraf ./web/interpolate.js && webpack"
+    "build": "rimraf ./browser-version/get-safe.js && webpack"
   },
   "keywords": [
     "safe",
