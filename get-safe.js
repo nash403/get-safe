@@ -4,6 +4,13 @@ const isFnCall = function (key){
   return key.slice(-2) === "()";
 };
 
+/* A value is accesible once it has properties.
+ * This said, strings and numbers are accessible, soly undefined and null aren't
+ */
+const isAccessible = function (obj) {
+  return obj !== null && obj !== undefined;
+};
+
 /*
  * @param {key} string concatenation of nested keys in this form: 'foo.bar.toto'.
  *  You can even call a function if the last key ends with '()'.
@@ -17,7 +24,7 @@ module.exports = (key, obj, ...args) => {
   let isFnCallLastkey = isFnCall(lastkey);
   lastkey = isFnCallLastkey ? lastkey.slice(0,-2) : lastkey;
   let beforelast = splitted.reduce((a,b) => {
-    return a && a[b];
+    return isAccessible(a) && a[b];
   }, obj);
-  return beforelast && (typeof beforelast === 'object') && (isFnCallLastkey ? beforelast[lastkey](...args) : beforelast[lastkey]);
+  return isAccessible(beforelast) ? (isFnCallLastkey ? beforelast[lastkey](...args) : beforelast[lastkey]) : undefined;
 };
