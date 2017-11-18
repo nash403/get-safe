@@ -1,8 +1,7 @@
 {
   "name": "get-safe",
-  "version": "1.4.2",
-  "description":
-    "safe access to deeply nested properties and functions in JS objects without getting a TypeError",
+  "version": "1.5.0",
+  "description": "safe access to deeply nested properties and functions in JS objects without getting a TypeError",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --progress --hide-modules",
