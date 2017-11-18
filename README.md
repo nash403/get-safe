@@ -2,9 +2,8 @@
 
 > Safe access to deeply nested properties or functions in JS objects without getting a TypeError but undefined instead.
 
-***
+
 You can even call a nested function in objects if the last nested key ends with `()`. You can pass arguments by adding them as last parameters of the get-safe function call.
-***
 
 #### Install:
 
@@ -57,3 +56,5 @@ console.log(_('foo.bar.baz.2',myObj)); // logs 'coming'
 console.log(_('foo.bar.fifo()',myObj,'arg1','arg2')); // calls the nested function 'fifo' and logs its result
 console.log(_('foo.inexistant.property.baz',myObj)); // logs 'undefined'
 ```
+
+_NOTE:_ If you are **NOT** making a function call and just accessing a property, you can pass a default value as the third argument, this will be returned instead of `undefined` if the nested property doesn't exsit.
